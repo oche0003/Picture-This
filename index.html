@@ -11,12 +11,58 @@
 
 <body>
   <header class="header">
-    <div class="title">
+    <div class="title"> 
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+<!-- when working with min with you start from the largest to the smallest media query, when it comes to max with its the other way round -->
+    <picture>
+      <source srcset="images/museum-320_x_180.jpg 1x,
+       images/museum-640_x_360.jpg 2x,
+       images/museum-960_x540.jpg 3x"
+       media="(max-width:320px)">
 
+       <source srcset="images/museum-480_x_270.jpg 1x,
+       images/museum-960_x_540.jpg 2x,
+       images/museum-1440_x810.jpg 3x"
+       media="(max-width:480px)">
+
+       <source srcset="images/museum-720_x_405.jpg 1x,
+       images/museum-1440_x_810.jpg 2x,
+       images/museum-2160_x1215.jpg 3x"
+       media="(max-width:720px)">
+
+       <source srcset="images/museum-960_x_540.jpg 1x,
+       images/museum-1920_x_1080.jpg 2x,
+       images/museum-2880_x1621.jpg 3x"
+       media="(max-width:959px)">
+
+      
+      
+      <!-- min width -->
+      
+      
+       <source srcset="images/museum-800x_800.jpg 1x,
+       images/museum-1600_x_1600.jpg 2x,
+       images/museum-2400_x2400.jpg 3x"
+       media="(min-width:1600px)">
+
+
+       <source srcset="images/museum-640x_640.jpg 1x,
+       images/museum-1280_x_1280.jpg 2x,
+       images/museum-1920_x1920.jpg 3x"
+       media="(min-width:1280px)">
+    
+       
+       <source srcset="images/museum-480x_480.jpg 1x,
+       images/museum-960_x_960.jpg 2x,
+       images/museum-1440_x1440.jpg 3x"
+       media="(min-width:960px)">
+
+      <img src="images/museum.jpg" alt="placeholder" >
+
+
+  </picture>
   </header>
 </body>
 
